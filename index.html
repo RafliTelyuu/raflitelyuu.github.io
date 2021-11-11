@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfl_x</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="img/icon.png">
+</head>
+<body>
+    <div class="navigation">
+        <ul>
+            <li class="list">
+                <a href="#home">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="title">Home</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#profile">
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <span class="title">Profile</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#gallery">
+                    <span class="icon"><ion-icon name="image-outline"></ion-icon></span>
+                    <span class="title">Gallery</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#note">
+                    <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                    <span class="title">Note</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="toggle">
+        <ion-icon name="grid-outline" class="open"></ion-icon>
+        <ion-icon name="close-outline" class="close"></ion-icon>
+    </div>
+
+    <div class="toggle color" >
+        <ion-icon name="color-filter-outline" class="open"></ion-icon>
+        <ion-icon name="close-outline" class="close"></ion-icon><br>
+    </div>
+    
+    <div class="color-pallete">
+        <ul>
+            <div class="color c1" onclick="colorChange(this)">
+    
+            </div><br>
+            <div class="color c2" onclick="colorChange(this)">
+    
+            </div><br>
+            <div class="color c3" onclick="colorChange(this)">
+    
+            </div><br>
+            <div class="color c4" onclick="colorChange(this)">
+    
+            </div><br>
+            <div class="color c5" onclick="colorChange(this)">
+    
+            </div><br>
+            <div class="color c6" onclick="colorChange(this)">
+    
+            </div>
+        </ul>
+    </div>
+
+    <div class="content" id="home">
+        <div style="grid-column: 1 / 3;">
+            <center style="font-family: 'Cabin', sans-serif;
+            font-size: 60px;">
+                Welcome to My Personal Website
+            </center>
+        </div><br>
+        <div id="day" style="font-size: 35px;
+        grid-column: 1 / 3;">
+            Today is
+        </div>
+
+        <fieldset style="grid-column: 1 / 3;">
+            <legend style="margin-left: 5px;">today's note:</legend>
+            <p id="quotes"></p>
+        </fieldset>
+
+        <div class="day-count" style="grid-column: 1 / 3;">
+            <center>
+                <p id="day-count">How old is this website?</p>
+            </center>
+        </div>
+
+        <div style="grid-column: 1 / 3;">
+            <center>
+                <button id="btn1" onclick="FewAlert()" onmouseover="buttonChangeOver()" onmouseout="buttonChangeOut()">Hover Here</button>
+            </center>
+        </div>
+    </div><br><br><br><br>
+
+    <div class="content" id="profile">
+        <div style="grid-column: 1 / 3;">
+            <center style="font-family: 'Cabin', sans-serif;
+            font-size: 60px;">
+                About Me,
+            </center>
+        </div><br>
+        <div style="grid-column: 1 / 3;">
+            <center>
+                <img src="img/refly.png" alt="" id="syf">
+            </center><br>
+            <center>
+                <p id="name" style="font-size: 20px;
+                height: 1em;"></p>
+                <p style="font-size: 12px;"><br>
+                    Rafli Maisyadiva</p>
+            </center><br><br>
+        </div>
+        
+
+        <!-- Activity & Skills -->
+        
+        <div class="skill-container">
+            Skills & Activity <br>
+            <span style="font-size: smaller;">-Click on Social Media-</span>
+            <div class="skill-data">
+                <ion-icon name="logo-html5"></ion-icon>
+                <span class="skill-name">HTML</span>
+                <span class="skill-percentage">60%</span>
+                <div class="skill-bar skill-html"></div>
+            </div>
+
+
+            <div class="skill-data">
+                <ion-icon name="logo-css3"></ion-icon>
+                <span class="skill-name">CSS</span>
+                <span class="skill-percentage">70%</span>
+                <div class="skill-bar skill-css"></div>
+            </div>
+            
+
+            <div class="skill-data">
+                <ion-icon name="logo-javascript"></ion-icon>
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-percentage">50%</span>
+                <div class="skill-bar skill-js"></div>
+            </div>
+            
+
+            <a href="https://www.facebook.com/rafli.blazing/" style="text-decoration: none;
+            color: black;" target="_blank"><div class="skill-data">
+                <ion-icon name="logo-facebook"></ion-icon>
+                <span class="skill-name">Facebook App</span>
+                <span class="skill-percentage">80%</span>
+                <div class="activity-bar skill-ps"></div>
+            </div></a>
+            
+
+            <a href="https://www.youtube.com/channel/UCAsI6auu9EqWYfiBEU4UjSQ" style="text-decoration: none;
+            color: black;" target="_blank"><div class="skill-data">
+                <ion-icon name="logo-youtube"></ion-icon>
+                <span class="skill-name">Youtube</span>
+                <span class="skill-percentage">95%</span>
+                <div class="activity-bar skill-yt"></div>
+            </div></a>
+            
+
+            <a href="https://steamcommunity.com/id/dr4g-on/" style="text-decoration: none;
+            color: black;" target="_blank"><div class="skill-data">
+                <ion-icon name="logo-steam"></ion-icon>
+                <span class="skill-name">Steam</span>
+                <span class="skill-percentage">40%</span>
+                <div class="activity-bar skill-steam"></div>
+            </div></a>
+
+            <a href="https://www.instagram.com/rfl_x/" style="text-decoration: none;
+            color: black;" target="_blank"><div class="skill-data">
+                <ion-icon name="logo-instagram"></ion-icon>
+                <span class="skill-name">Instagram</span>
+                <span class="skill-percentage">75%</span>
+                <div class="activity-bar skill-ig"></div>
+            </div></a>
+            
+        </div>
+
+        
+        <div style="margin-left: 20px;">
+            <div>
+                <span class="profile-left">Aliases</span> : <span>'Rap', 'Pli', 'Koboy'</span>
+            </div><br>
+
+            <div>
+                <span class="profile-left">Born</span> : Singkawang
+            </div><br>
+
+            <div>
+                <span class="profile-left">Born Date</span> : December 24, 2001
+            </div><br>
+
+            <div>
+                <span class="profile-left">Hobbies</span> : Touring, Touring, Touring, Touring, and , <span style="font-family: 'Cabin', sans-serif;
+                font-family: 'Style Script', cursive;">Praying</span> heheh
+            </div><br>
+
+            <div>
+                <span class="profile-left">Colors</span> : <span style="color: #32C1CD;
+                font-family: 'Cabin', sans-serif;">Blue</span> and prefer <span style="font-weight: 900;
+                font-family: 'Cabin', sans-serif;">Darker </span> Colors.
+            </div><br>
+
+        </div>
+    </div><br><br><br><br>
+
+    <div class="content" id="gallery">
+        <div style="grid-column: 1 / 3;">
+            <center style="font-family: 'Cabin', sans-serif;
+            font-size: 55px;">
+                My Galleries
+            </center>
+            <center style="font-family: 'Cabin', sans-serif;
+            font-size: 12px;">
+                Use [SHIFT + SCROLL] to scroll
+            </center>
+        </div><br>
+
+        <div style="grid-column: 1 / 3;">
+            <center>
+                M E
+            </center>
+        </div><br>
+        
+        <div class="wrapper" style="grid-column: 1 / 3;">
+            <div class="item"><img class="img" src="img/thumbnail/1.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/2.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/3.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/4.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/5.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/6.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/7.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/8.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/9.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/10.jpeg" alt="" onclick="expandImg(this)"></div>
+            <!-- <div class="item"><img class="img" src="img/thumbnail/24.jpeg" alt="" onclick="expandImg(this)"></div> -->
+        </div>
+
+        <div class="img-container" style="grid-column: 1 / 2;">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <img id="expandedImg" style="width: 100%;">
+        </div>
+
+        <div class="img-container" style="grid-column: 2 / 3;
+        margin-left: 10px;">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <img id="expandedImg2" style="width: 100%;">
+        </div><br>
+
+        <div style="grid-column: 1 / 3;">
+            <center>
+                B I K E S
+            </center>
+        </div><br>
+
+        <div class="wrapper" style="grid-column: 1 / 3;
+        display: flex;
+        flex-direction: row-reverse;">
+            <div class="item"><img class="img" src="img/thumbnail/s1.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s2.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s3.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s4.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s5.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s6.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s7.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s8.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s9.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s10.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <!-- <div class="item"><img class="img" src="img/thumbnail/s25.jpeg" alt="" onclick="expandImg2(this)"></div> -->
+        </div>
+        
+        
+    </div><br><br><br><br>
+
+    <div class="content" id="note">
+        <div style="grid-column: 1 / 4;">
+            <center style="font-family: 'Cabin', sans-serif;
+            font-size: 55px;">
+                Some Thoughts.
+            </center>
+
+            <center style="font-family: 'Cabin', sans-serif;
+            font-size: 15px;">
+                Click the Icon to Expand or Shrink
+            </center><br>
+        </div>
+
+        <div class="card">
+            <div class="icon-container">
+                <span class="icon">
+                    <i class="material-icons">star_half</i>
+                </span>
+            </div>
+
+            <div class="card-title">
+                Thought 1
+            </div>
+
+            <div class="card-content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptatum itaque accusantium pariatur voluptas quas cupiditate perspiciatis, tenetur impedit odio fugit commodi dolore quidem quibusdam, excepturi qui sed vero illum ea asperiores officia dicta porro provident recusandae! Ipsum quisquam illo error nam et incidunt eaque aperiam nulla consectetur pariatur omnis officia cum reprehenderit iusto repudiandae, culpa rem vel doloremque. Veniam?<br><br>
+
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi consequuntur dignissimos at ex adipisci nam tempora, nisi nesciunt in quisquam debitis ratione eius nulla labore commodi cum, rerum quod doloremque beatae soluta veritatis maiores, quaerat veniam. Dolorem qui laborum, eveniet nobis odio libero odit aut eius vitae enim recusandae? Laboriosam sed iure aliquid distinctio voluptas?<br><br>
+
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed impedit facilis eum dolorum sequi fugiat quos optio veritatis quod non repellat alias, et commodi ad odit distinctio repudiandae cum! Ex modi quasi sapiente ipsum et dignissimos neque accusantium aliquid saepe! <br><br>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon-container">
+                <span class="icon">
+                    <i class="material-icons">polymer</i>
+                </span>
+            </div>
+
+            <div class="card-title">
+                Thought 2
+            </div>
+
+            <div class="card-content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quod consequuntur sit ab, nobis blanditiis cumque nemo tempore, rerum nostrum quisquam expedita asperiores eos alias quasi eaque adipisci perferendis tempora laboriosam, beatae distinctio illum eligendi. Neque nemo tempore excepturi dolores fugiat mollitia sequi voluptates porro quos! Consequuntur accusamus voluptatibus aliquam! <br><br>
+
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore, assumenda sequi ducimus, sapiente saepe suscipit aliquam voluptas delectus similique odit? Aperiam nobis voluptatibus veritatis ipsum hic eius velit voluptatum officia porro quo recusandae sint, dolorem ab temporibus molestias vel reiciendis doloremque a laudantium? Pariatur. <br><br>
+
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis alias exercitationem repellat culpa ad explicabo, nemo magnam nostrum esse tenetur consequatur vitae a libero nulla consequuntur rem fuga officia necessitatibus. <br><br>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon-container">
+                <span class="icon">
+                    <i class="material-icons">opacity</i>
+                </span>
+            </div>
+
+            <div class="card-title">
+                Hope
+            </div>
+            <div class="card-content">
+                if you wanna die, you die. but die tomorrow. if it is still hard for you to even tomorrow, die the next day. if it is still painful even the next day, it’s not too late to die the next day after that. <br><br>
+
+                if you live on the day by day like that, a good day will certainly come. the day when you'll be glad that you didn’t kill yourself will come. you had such a hard time so far and it will be too cruel to make you even lose a chance to become happy. <br><br>
+
+                Still, it’s okay for you to cry. It’s okay for you to rest your soul. Time does heal, but not in a wink. So, until that, stay sane, stay healthy, and stay patient. Remember, even a bad day is just 24 hours. <br><br>
+
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="icon-container">
+                <span class="icon">
+                    <i class="material-icons">add_alarm</i>
+                </span>
+            </div>
+
+            <div class="card-title">
+                Thought 4
+            </div>
+            <div class="card-content">
+                Lorem ipsum dolor sit amet. <br><br>
+
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, quia. <br><br>
+
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, sed. <br><br>
+
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, dolor repudiandae. <br> <br>
+
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, voluptatibus officia! <br><br>
+
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, sapiente. Ducimus ea sequi nulla tenetur. <br> <br>
+
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia molestias tempore consequuntur! <br><br>
+
+                —Forgetting you is killing. <br><br>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon-container">
+                <span class="icon">
+                    <i class="material-icons">replay</i>
+                </span>
+            </div>
+
+            <div class="card-title">
+               Thought 5
+            </div>
+            <div class="card-content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, delectus eligendi. Soluta recusandae perferendis odio commodi assumenda omnis nesciunt facilis voluptates quo unde accusamus est nisi iusto quis, expedita nam, sint enim sit impedit nemo deleniti fugit reprehenderit porro? Molestias nesciunt alias facere hic error rerum ipsam pariatur, consectetur ex deserunt quo accusamus voluptate exercitationem modi delectus inventore corporis! Asperiores. <br> <br>
+                
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum distinctio modi voluptatem culpa itaque ad? <br><br>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon-container">
+                <span class="icon">
+                    <i class="material-icons">compare_arrows</i>
+                </span>
+            </div>
+
+            <div class="card-title">
+                Thought 6
+            </div>
+            <div class="card-content">
+                Lorem ipsum dolor sit amet consectetur adipisicing. <br><br>
+
+                Lorem ipsum dolor sit amet consectetur. <br> <br>
+
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, officia. <br><br>
+
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam mollitia sint iusto! <br> <br>
+
+                You're a revelation.
+                Knowing you is bliss.
+                Even though we're not running alongside each other. <br><br>
+            </div>
+        </div>
+
+        <!-- <div class="card">
+            <div class="icon-container">
+                <span class="icon">
+                    <i class="material-icons"></i>
+                </span>
+            </div>
+
+            <div class="card-title">
+                Lorem
+            </div>
+            <div class="card-content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eaque enim sit asperiores at officiis sint porro voluptatibus dolorem eos iste repudiandae, sunt nihil cumque assumenda provident veritatis doloribus tenetur fuga quasi id libero? Ipsam perferendis quaerat doloremque molestias iure nihil, sapiente dignissimos voluptatem qui eum reiciendis. Voluptates, voluptatem praesentium.<br><br>
+            </div>
+        </div> -->
+
+    </div><br><br><br><br>
+
+    <footer>
+        <p align="center" style="padding: 50px; color: white;">© Rafli Maisyadiva<br>1303190065<br>
+        <a href="http://www.computing-telu.com/laboratory/" style="color: white;">https://github.com/RafliTelyuu</a> <br></p>
+    </footer>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="js/script.js"></script>
+
+<script>
+
+    let menuToggle = document.querySelector('.toggle');
+    let menuToggleColor = document.querySelector('.toggle.color')
+    let colorPallete = document.querySelector('.color-pallete')
+    let navigation = document.querySelector('.navigation');
+    let content = document.querySelectorAll('.content');
+
+    menuToggle.onclick = function() {
+        menuToggle.classList.toggle('active');
+        navigation.classList.toggle('active');
+        
+        let i;
+        for (i=0; i<content.length; i++) {
+            content[i].classList.toggle('active');
+        }
+    }
+
+    menuToggleColor.onclick = function() {
+        menuToggleColor.classList.toggle('sub-active');
+        colorPallete.classList.toggle('active');
+    }
+
+    //active
+    let list = document.querySelectorAll('.list');
+    for (let i = 0; i<list.length; i++) {
+        list[i].onclick = function() {
+            let j = 0;
+            while(j<list.length) {
+                list[j++].className = "list";
+            }
+            list[i].className = "list active";
+        }
+    }
+
+    //day n quotes
+        let day;
+        const quotesArray = [];
+        switch (new Date().getDay()) {
+            case 0:
+                day = "Sunday";
+                quotesArray[0] = "Sunday Note 1";
+                quotesArray[1] = "Sunday Note 2";
+
+                random = Math.floor(Math.random() * quotesArray.length);
+                quotes = quotesArray[random];
+                break;
+            case 1:
+                day = "Monday";
+                quotesArray[0] = "Monday Note 1";
+                quotesArray[1] = "Monday Note 2.";
+
+                random = Math.floor(Math.random() * quotesArray.length);
+                quotes = quotesArray[random];
+                break;
+            case 2:
+                day = "Tuesday";
+                quotesArray[0] = "Tuesday Note 1";
+                quotesArray[1] = "Tuesday Note 2";
+
+                random = Math.floor(Math.random() * quotesArray.length);
+                quotes = quotesArray[random];
+                break;
+            case 3:
+                day = "Wednesday";
+                quotesArray[0] = "Wednesday Note 1";
+                quotesArray[1] = "Wednesday Note 2";
+
+                random = Math.floor(Math.random() * quotesArray.length);
+                quotes = quotesArray[random];
+                break;
+            case 4:
+                day = "Thursday";
+                quotesArray[0] = "Thursday Note 1";
+                quotesArray[1] = "Thursday Note 2";
+
+                random = Math.floor(Math.random() * quotesArray.length);
+                quotes = quotesArray[random];
+                break;
+            case 5:
+                day = "Friday";
+                quotesArray[0] = "Fridaye Note 1";
+                quotesArray[1] = "Fridaye Note 2";
+
+                random = Math.floor(Math.random() * quotesArray.length);
+                quotes = quotesArray[random];
+                break;
+            case 6:
+                day = "Saturday";
+                quotesArray[0] = "Saturday Note 1";
+                quotesArray[1] = "Saturday Note 2";
+
+                random = Math.floor(Math.random() * quotesArray.length);
+                quotes = quotesArray[random];
+                break;
+        }
+        document.getElementById("day").style.fontWeight += "900";
+        document.getElementById("day").innerHTML += day;
+        document.getElementById("quotes").innerHTML = quotes;
+
+        
+</script>
+</body>
+</html>
